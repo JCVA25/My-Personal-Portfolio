@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const ContactContainer = styled.div`
   min-height: 100vh;
@@ -151,6 +152,31 @@ const SubmitButton = styled(motion.button)`
 
 const Contact = () => {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const formData = new FormData(e.target);
+      const response = await fetch('https://formsubmit.co/ajax/villaagustinjohncarlo@gmail.com', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        navigate('/');
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      alert('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <ContactContainer>
@@ -177,8 +203,7 @@ const Contact = () => {
         </ContactInfo>
 
         <Form
-          action="https://formsubmit.co/villaagustinjohncarlo@gmail.com"
-          method="POST"
+          onSubmit={handleSubmit}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -187,7 +212,6 @@ const Contact = () => {
           <input type="hidden" name="_subject" value="New Portfolio Contact Message!" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="true" />
-          <input type="hidden" name="_next" value="http://localhost:5173/" />
 
           <FormGroup>
             <Label>Name</Label>
@@ -220,8 +244,9 @@ const Contact = () => {
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </SubmitButton>
           </FormGroup>
         </Form>

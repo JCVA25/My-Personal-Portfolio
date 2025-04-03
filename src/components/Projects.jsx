@@ -124,7 +124,7 @@ const Projects = () => {
     {
       title: 'Carsada',
       description: ' The future of jeepney travel is here. Our app modernizes routes, provides fixed fares, and makes your jeepney journey easier than ever.',
-      image: 'src/assets/carsada.png',
+      image: '/assets/carsada.png',
       features: [
         'Easy to find routes for jeepneys and buses',
         'Fixed fare calculation system',
@@ -137,7 +137,7 @@ const Projects = () => {
     {
       title: 'Hamunto',
       description: 'Manage your school club effortlessly with Hamunto. Our intuitive platform handles events, announcements, and membership, freeing you to focus on your club activities.',
-      image: 'src/assets/hamunto.png',
+      image: '/assets/hamunto.png',
       features: [
         'Explore campus activities and events',
         'Real-time announcements system',

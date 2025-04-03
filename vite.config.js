@@ -1,19 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   base: '/',
   server: {
-    port: process.env.PORT || 3000
+    port: 5173,
+    open: true
   },
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
-    minify: true
+    assetsDir: 'assets',
+    sourcemap: true
   },
-  preview: {
-    port: process.env.PORT || 3000
-  }
+  publicDir: 'public'
 })

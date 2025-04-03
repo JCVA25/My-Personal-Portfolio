@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const HomeContainer = styled.div`
   min-height: 100vh;
@@ -93,6 +94,12 @@ const SecondaryButton = styled(motion.a)`
   &:hover {
     background: #2d3436;
     color: white;
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 `;
 
@@ -237,6 +244,7 @@ const badgeAnimation = {
 };
 
 const Home = () => {
+  const [cvError, setCvError] = useState(false);
   const nameText = "John Carlo";
   
   const containerVariants = {
@@ -268,6 +276,23 @@ const Home = () => {
         }
       }
     })
+  };
+
+  const handleDownloadCV = (e) => {
+    // Check if file exists before download
+    fetch('/JohnCarlo-CV.pdf')
+      .then(response => {
+        if (response.status === 404) {
+          e.preventDefault();
+          setCvError(true);
+          alert('CV file is not available at the moment. Please try again later.');
+        }
+      })
+      .catch(() => {
+        e.preventDefault();
+        setCvError(true);
+        alert('There was an error downloading the CV. Please try again later.');
+      });
   };
 
   return (
@@ -313,21 +338,11 @@ const Home = () => {
           <SecondaryButton
             href="/JohnCarlo-CV.pdf"
             download="JohnCarlo-CV.pdf"
+            onClick={handleDownloadCV}
+            className={cvError ? 'disabled' : ''}
             as={motion.a}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={(e) => {
-              // Check if file exists
-              fetch(e.target.href).then(response => {
-                if (response.status === 404) {
-                  e.preventDefault();
-                  alert('CV file is not available at the moment. Please try again later.');
-                }
-              }).catch(() => {
-                e.preventDefault();
-                alert('There was an error downloading the CV. Please try again later.');
-              });
-            }}
           >
             Download CV
           </SecondaryButton>
@@ -350,7 +365,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <ProfileImage src="src/assets/profil.png" alt="Profile" />
+          <ProfileImage src="/assets/profil.png" alt="Profile" />
           <ExperienceBadge
             initial="initial"
             animate="animate"
