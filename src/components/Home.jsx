@@ -14,6 +14,13 @@ const HomeContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
+  flex-direction: column;
+  padding-top: 4rem;
+  
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    padding-top: 0;
+  }
 `;
 
 const ContentSection = styled.div`
@@ -22,27 +29,53 @@ const ContentSection = styled.div`
   flex-direction: column;
   justify-content: center;
   max-width: 650px;
-  padding: 2rem 0 2rem 4rem;
+  padding: 1.5rem;
   z-index: 1;
+  margin: 0 auto;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 2rem 0 2rem 4rem;
+    margin: 0;
+  }
 `;
 
 const Tag = styled.span`
   color: #ff6b6b;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   display: block;
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
 `;
 
 const Title = styled(motion.h1)`
-  font-size: 4.2rem;
+  font-size: 2rem;
   color: #2d3436;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   line-height: 1.1;
   font-weight: 700;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 4.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1.5px;
+    text-align: left;
+  }
 
   br {
     margin-bottom: 0.2rem;
@@ -50,31 +83,60 @@ const Title = styled(motion.h1)`
 `;
 
 const Subtitle = styled(motion.p)`
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #636e72;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 100%;
+  text-align: center;
+  padding: 0 0.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+    max-width: 500px;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 1rem;
-  margin: 2rem 0;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0 1rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    width: auto;
+    margin: 2rem 0;
+    padding: 0;
+    gap: 1rem;
+  }
 `;
 
 const PrimaryButton = styled(motion(Link))`
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   background: #ff6b6b;
   color: white;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   border: none;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    width: auto;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
   
   &:hover {
     background: #ff5252;
@@ -82,17 +144,25 @@ const PrimaryButton = styled(motion(Link))`
 `;
 
 const SecondaryButton = styled(motion.a)`
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   background: transparent;
   color: #2d3436;
   border: 1.5px solid #2d3436;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    width: auto;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
   
   &:hover {
     background: #2d3436;
@@ -109,13 +179,24 @@ const SecondaryButton = styled(motion.a)`
 const SocialLinks = styled.div`
   display: flex;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  padding: 0 1rem;
+  
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    padding: 0;
+  }
 `;
 
 const SocialLink = styled.a`
   color: #2d3436;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
+  
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
   
   &:hover {
     color: #ff6b6b;
@@ -129,15 +210,38 @@ const ImageSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0;
-  margin-left: 2rem;
+  padding: 1rem;
+  margin: 0;
+  margin-top: -2rem;
+  
+  @media (min-width: 768px) {
+    padding: 2rem;
+    margin-top: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 0;
+    margin-left: 2rem;
+  }
 `;
 
 const ProfileImageContainer = styled(motion.div)`
-  width: 650px;
-  height: 650px;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
   position: relative;
-  margin-left: 2rem;
+  margin: 0 auto;
+  
+  @media (min-width: 768px) {
+    max-width: 500px;
+    height: 500px;
+  }
+  
+  @media (min-width: 1024px) {
+    max-width: 650px;
+    height: 650px;
+    margin-left: 2rem;
+  }
 `;
 
 const ProfileImage = styled.img`
@@ -148,7 +252,7 @@ const ProfileImage = styled.img`
 
 const Badge = styled(motion.div)`
   background: white;
-  padding: 0.7rem 1.2rem;
+  padding: 0.6rem 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   position: absolute;
@@ -156,9 +260,14 @@ const Badge = styled(motion.div)`
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   backdrop-filter: blur(5px);
   border: 2px solid rgba(255, 107, 107, 0.1);
+  
+  @media (min-width: 768px) {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
 
   @keyframes glow {
     0%, 100% { box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2); }
@@ -171,8 +280,12 @@ const Badge = styled(motion.div)`
   }
 
   span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: inline-block;
+    
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 
   &:hover span {
@@ -181,18 +294,30 @@ const Badge = styled(motion.div)`
 `;
 
 const ExperienceBadge = styled(Badge)`
-  top: 20%;
-  right: -8%;
+  top: 5%;
+  right: -5%;
   animation: glow 2s ease-in-out infinite;
   transform-origin: right center;
+  z-index: 2;
+  
+  @media (min-width: 768px) {
+    top: 20%;
+    right: -8%;
+  }
 `;
 
 const TechBadge = styled(Badge)`
-  bottom: 20%;
-  left: -8%;
+  bottom: 5%;
+  left: -5%;
   animation: glow 2s ease-in-out infinite;
   animation-delay: 1s;
   transform-origin: left center;
+  z-index: 2;
+  
+  @media (min-width: 768px) {
+    bottom: 20%;
+    left: -8%;
+  }
 `;
 
 const AnimatedText = styled(motion.span)`
@@ -200,18 +325,32 @@ const AnimatedText = styled(motion.span)`
   position: relative;
   font-weight: 700;
   color: #2d3436;
-  font-size: 4.2rem;
-  width: ${props => props.isSpace ? '20px' : '42px'};
+  font-size: 2rem;
+  width: ${props => props.isSpace ? '15px' : '24px'};
   text-align: center;
+  
+  @media (min-width: 768px) {
+    font-size: 4.2rem;
+    width: ${props => props.isSpace ? '20px' : '42px'};
+  }
 `;
 
 const TypingContainer = styled(motion.div)`
   display: inline-flex;
   position: relative;
-  font-size: 4.2rem;
-  height: 4.2rem;
+  font-size: 2rem;
+  height: 2rem;
   line-height: 1.1;
-  gap: 4px;
+  gap: 2px;
+  justify-content: center;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    font-size: 4.2rem;
+    height: 4.2rem;
+    gap: 4px;
+    justify-content: flex-start;
+  }
 `;
 
 const Cursor = styled(motion.span)`

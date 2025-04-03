@@ -8,16 +8,24 @@ const hamuntoImage = new URL('/assets/hamunto.png', import.meta.url).href;
 
 const ProjectsContainer = styled.div`
   min-height: 100vh;
-  padding: 6rem 2rem 2rem;
+  padding: 6rem 1rem 2rem;
   background: #f5f5f5;
+  
+  @media (min-width: 768px) {
+    padding: 6rem 2rem 2rem;
+  }
 `;
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -25,6 +33,9 @@ const ProjectCard = styled(motion.div)`
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
 `;
 
 const ProjectImage = styled.div`
@@ -32,6 +43,10 @@ const ProjectImage = styled.div`
   background: #ddd;
   background-size: cover;
   background-position: center;
+  
+  @media (min-width: 768px) {
+    height: 250px;
+  }
 `;
 
 const ProjectContent = styled.div`
@@ -81,12 +96,19 @@ const ModalOverlay = styled(motion.div)`
 
 const ModalContent = styled(motion.div)`
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
-  max-width: 600px;
-  width: 100%;
+  max-width: 90%;
+  width: 500px;
   max-height: 80vh;
   overflow-y: auto;
+  position: relative;
+  margin: 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 2rem;
+    margin: 0;
+  }
 `;
 
 const FeatureList = styled.ul`
@@ -100,7 +122,11 @@ const FeatureItem = styled.li`
   align-items: center;
   margin-bottom: 1rem;
   color: #2d3436;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 
   &:before {
     content: "•";

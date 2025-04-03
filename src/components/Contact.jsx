@@ -5,34 +5,52 @@ import { useState } from 'react';
 
 const ContactContainer = styled.div`
   min-height: 100vh;
-  padding: 6rem 2rem 2rem;
+  padding: 6rem 1rem 2rem;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  @media (min-width: 768px) {
+    padding: 6rem 2rem 2rem;
+  }
 `;
 
 const ContactWrapper = styled.div`
   max-width: 1200px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   background: #ffffff;
   border-radius: 20px;
-  padding: 3rem;
+  padding: 2rem;
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    padding: 3rem;
+  }
 `;
 
 const ContactInfo = styled.div`
-  padding-right: 2rem;
+  padding-right: 0;
+  
+  @media (min-width: 1024px) {
+    padding-right: 2rem;
+  }
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #2d3436;
   margin-bottom: 1.5rem;
   font-weight: 700;
   letter-spacing: -1px;
+  
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Description = styled.p`
@@ -72,9 +90,13 @@ const ContactItem = styled.div`
 
 const Form = styled(motion.form)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   background: transparent;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const FormGroup = styled.div`
@@ -83,7 +105,7 @@ const FormGroup = styled.div`
   gap: 0.5rem;
   
   &.full-width {
-    grid-column: span 2;
+    grid-column: 1 / -1;
   }
 `;
 
