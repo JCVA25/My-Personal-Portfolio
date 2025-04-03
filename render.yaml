@@ -2,11 +2,13 @@ services:
   - type: web
     name: portfolio
     env: static
-    buildCommand: chmod +x build.sh && ./build.sh
+    buildCommand: npm install && node node_modules/vite/bin/vite.js build
     staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
         value: 18.x
+      - key: NODE_ENV
+        value: production
     routes:
       - type: rewrite
         source: /*
