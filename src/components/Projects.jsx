@@ -2,6 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styled from '@emotion/styled';
 import { useState } from 'react';
 
+// Import images
+const carsadaImage = new URL('/assets/carsada.png', import.meta.url).href;
+const hamuntoImage = new URL('/assets/hamunto.png', import.meta.url).href;
+
 const ProjectsContainer = styled.div`
   min-height: 100vh;
   padding: 6rem 2rem 2rem;
@@ -124,7 +128,7 @@ const Projects = () => {
     {
       title: 'Carsada',
       description: ' The future of jeepney travel is here. Our app modernizes routes, provides fixed fares, and makes your jeepney journey easier than ever.',
-      image: '/assets/carsada.png',
+      image: carsadaImage,
       features: [
         'Easy to find routes for jeepneys and buses',
         'Fixed fare calculation system',
@@ -137,7 +141,7 @@ const Projects = () => {
     {
       title: 'Hamunto',
       description: 'Manage your school club effortlessly with Hamunto. Our intuitive platform handles events, announcements, and membership, freeing you to focus on your club activities.',
-      image: '/assets/hamunto.png',
+      image: hamuntoImage,
       features: [
         'Explore campus activities and events',
         'Real-time announcements system',

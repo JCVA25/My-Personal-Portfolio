@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
+// Import images
+const profileImage = new URL('/assets/profil.png', import.meta.url).href;
+
 const HomeContainer = styled.div`
   min-height: 100vh;
   display: flex;
@@ -365,7 +368,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <ProfileImage src="/assets/profil.png" alt="Profile" />
+          <ProfileImage src={profileImage} alt="Profile" />
           <ExperienceBadge
             initial="initial"
             animate="animate"

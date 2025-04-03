@@ -133,7 +133,7 @@ Error generating stack: `+o.message+`
       width: 100%;
     }
   }
-`,BC=()=>T.jsx(NC,{children:T.jsxs(FC,{children:[T.jsx(IC,{to:"/",children:T.jsx("span",{children:"JC"})}),T.jsxs(zC,{children:[T.jsx(wa,{whileHover:{y:-2},whileTap:{y:0},children:T.jsx(Kr,{to:"/",children:"Home"})}),T.jsx(wa,{whileHover:{y:-2},whileTap:{y:0},children:T.jsx(Kr,{to:"/projects",children:"Projects"})}),T.jsx(wa,{whileHover:{y:-2},whileTap:{y:0},children:T.jsx(Kr,{to:"/contact",children:"Contact"})})]})]})}),UC=V.div`
+`,BC=()=>T.jsx(NC,{children:T.jsxs(FC,{children:[T.jsx(IC,{to:"/",children:T.jsx("span",{children:"JC"})}),T.jsxs(zC,{children:[T.jsx(wa,{whileHover:{y:-2},whileTap:{y:0},children:T.jsx(Kr,{to:"/",children:"Home"})}),T.jsx(wa,{whileHover:{y:-2},whileTap:{y:0},children:T.jsx(Kr,{to:"/projects",children:"Projects"})}),T.jsx(wa,{whileHover:{y:-2},whileTap:{y:0},children:T.jsx(Kr,{to:"/contact",children:"Contact"})})]})]})}),UC=new URL("/assets/profil.png",self.location).href,$C=V.div`
   min-height: 100vh;
   display: flex;
   padding: 0;
@@ -141,7 +141,7 @@ Error generating stack: `+o.message+`
   position: relative;
   overflow: hidden;
   width: 100%;
-`,$C=V.div`
+`,bC=V.div`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ Error generating stack: `+o.message+`
   max-width: 650px;
   padding: 2rem 0 2rem 4rem;
   z-index: 1;
-`,bC=V.span`
+`,WC=V.span`
   color: #ff6b6b;
   font-size: 1rem;
   text-transform: uppercase;
@@ -157,7 +157,7 @@ Error generating stack: `+o.message+`
   margin-bottom: 1rem;
   font-weight: 500;
   display: block;
-`,WC=V(ue.h1)`
+`,HC=V(ue.h1)`
   font-size: 4.2rem;
   color: #2d3436;
   margin-bottom: 1rem;
@@ -168,17 +168,17 @@ Error generating stack: `+o.message+`
   br {
     margin-bottom: 0.2rem;
   }
-`,HC=V(ue.p)`
+`,KC=V(ue.p)`
   font-size: 1.1rem;
   color: #636e72;
   margin-bottom: 2rem;
   line-height: 1.6;
   max-width: 500px;
-`,KC=V.div`
+`,GC=V.div`
   display: flex;
   gap: 1rem;
   margin: 2rem 0;
-`,GC=V(ue(Kr))`
+`,QC=V(ue(Kr))`
   padding: 1rem 2.5rem;
   background: #ff6b6b;
   color: white;
@@ -194,7 +194,7 @@ Error generating stack: `+o.message+`
   &:hover {
     background: #ff5252;
   }
-`,QC=V(ue.a)`
+`,YC=V(ue.a)`
   padding: 1rem 2.5rem;
   background: transparent;
   color: #2d3436;
@@ -217,7 +217,7 @@ Error generating stack: `+o.message+`
     cursor: not-allowed;
     pointer-events: none;
   }
-`,YC=V.div`
+`,XC=V.div`
   display: flex;
   gap: 2rem;
   margin-top: 1rem;
@@ -230,7 +230,7 @@ Error generating stack: `+o.message+`
     color: #ff6b6b;
     transform: translateY(-2px);
   }
-`,XC=V.div`
+`,ZC=V.div`
   flex: 1;
   display: flex;
   align-items: center;
@@ -238,12 +238,12 @@ Error generating stack: `+o.message+`
   position: relative;
   padding: 0;
   margin-left: 2rem;
-`,ZC=V(ue.div)`
+`,JC=V(ue.div)`
   width: 650px;
   height: 650px;
   position: relative;
   margin-left: 2rem;
-`,JC=V.img`
+`,qC=V.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -279,18 +279,18 @@ Error generating stack: `+o.message+`
   &:hover span {
     animation: bounce 0.5s ease infinite;
   }
-`,qC=V(bg)`
+`,eP=V(bg)`
   top: 20%;
   right: -8%;
   animation: glow 2s ease-in-out infinite;
   transform-origin: right center;
-`,eP=V(bg)`
+`,tP=V(bg)`
   bottom: 20%;
   left: -8%;
   animation: glow 2s ease-in-out infinite;
   animation-delay: 1s;
   transform-origin: left center;
-`,tP=V(ue.span)`
+`,nP=V(ue.span)`
   display: inline-block;
   position: relative;
   font-weight: 700;
@@ -298,7 +298,7 @@ Error generating stack: `+o.message+`
   font-size: 4.2rem;
   width: ${e=>e.isSpace?"20px":"42px"};
   text-align: center;
-`,nP=V(ue.div)`
+`,rP=V(ue.div)`
   display: inline-flex;
   position: relative;
   font-size: 4.2rem;
@@ -317,27 +317,27 @@ Error generating stack: `+o.message+`
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
   }
-`;const Od={initial:{opacity:0,scale:.5,x:-50},animate:{opacity:1,scale:1,x:0,transition:{type:"spring",stiffness:200,damping:20}}},rP=()=>{const[e,t]=S.useState(!1),n="John Carlo",r={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.1}}},i={hidden:{opacity:0,y:20},visible:s=>({opacity:1,y:[0,-15,0],transition:{opacity:{duration:.2},y:{repeat:1/0,duration:.5,delay:s*.1,repeatDelay:2.5,ease:"easeOut"}}})},o=s=>{fetch("/JohnCarlo-CV.pdf").then(a=>{a.status===404&&(s.preventDefault(),t(!0),alert("CV file is not available at the moment. Please try again later."))}).catch(()=>{s.preventDefault(),t(!0),alert("There was an error downloading the CV. Please try again later.")})};return T.jsxs(UC,{children:[T.jsxs($C,{children:[T.jsx(bC,{children:"Frontend Developer AND UI/UX Designer"}),T.jsxs(WC,{children:["Hello, my name is",T.jsx("br",{}),T.jsx(nP,{variants:r,initial:"hidden",animate:"visible",children:n.split("").map((s,a)=>T.jsx(tP,{variants:i,initial:"hidden",animate:"visible",custom:a,isSpace:s===" ",children:s===" "?" ":s},a))})]}),T.jsx(HC,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.8},children:"I'm a second-year BSIT student at Western Institute of Technology, passionate about design and coding. My studies focus on developing my skills in these areas. I'm dedicated to creating innovative and functional solutions."}),T.jsxs(KC,{children:[T.jsx(GC,{to:"/contact",whileHover:{scale:1.05},whileTap:{scale:.95},children:"Contact Me"}),T.jsx(QC,{href:"/JohnCarlo-CV.pdf",download:"JohnCarlo-CV.pdf",onClick:o,className:e?"disabled":"",as:ue.a,whileHover:{scale:1.05},whileTap:{scale:.95},children:"Download CV"})]}),T.jsxs(YC,{children:[T.jsx(Sa,{href:"https://www.facebook.com/share/1BWNP5P2jS/",target:"_blank",children:T.jsx("i",{className:"fab fa-facebook"})}),T.jsx(Sa,{href:"https://www.instagram.com/sry.jc?igsh=eTBlNDY0dG5kZnQ4",target:"_blank",children:T.jsx("i",{className:"fab fa-instagram"})}),T.jsx(Sa,{href:"https://github.com/JCVA25",target:"_blank",children:T.jsx("i",{className:"fab fa-github"})})]})]}),T.jsx(XC,{children:T.jsxs(ZC,{initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},transition:{duration:.8},children:[T.jsx(JC,{src:"/public/assets/profil.png",alt:"Profile"}),T.jsxs(qC,{initial:"initial",animate:"animate",variants:Od,whileHover:{scale:1.1,rotate:[0,-2,2,0],transition:{duration:.3,rotate:{repeat:1/0,duration:.5}}},children:[T.jsx("span",{children:"🚀"})," 1 Year Experience"]}),T.jsxs(eP,{initial:"initial",animate:"animate",variants:Od,whileHover:{scale:1.1,rotate:[0,2,-2,0],transition:{duration:.3,rotate:{repeat:1/0,duration:.5}}},children:[T.jsx("span",{children:"💻"})," 2 Projects Complete"]})]})})]})},iP=V.div`
+`;const Od={initial:{opacity:0,scale:.5,x:-50},animate:{opacity:1,scale:1,x:0,transition:{type:"spring",stiffness:200,damping:20}}},iP=()=>{const[e,t]=S.useState(!1),n="John Carlo",r={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.1}}},i={hidden:{opacity:0,y:20},visible:s=>({opacity:1,y:[0,-15,0],transition:{opacity:{duration:.2},y:{repeat:1/0,duration:.5,delay:s*.1,repeatDelay:2.5,ease:"easeOut"}}})},o=s=>{fetch("/JohnCarlo-CV.pdf").then(a=>{a.status===404&&(s.preventDefault(),t(!0),alert("CV file is not available at the moment. Please try again later."))}).catch(()=>{s.preventDefault(),t(!0),alert("There was an error downloading the CV. Please try again later.")})};return T.jsxs($C,{children:[T.jsxs(bC,{children:[T.jsx(WC,{children:"Frontend Developer AND UI/UX Designer"}),T.jsxs(HC,{children:["Hello, my name is",T.jsx("br",{}),T.jsx(rP,{variants:r,initial:"hidden",animate:"visible",children:n.split("").map((s,a)=>T.jsx(nP,{variants:i,initial:"hidden",animate:"visible",custom:a,isSpace:s===" ",children:s===" "?" ":s},a))})]}),T.jsx(KC,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.8},children:"I'm a second-year BSIT student at Western Institute of Technology, passionate about design and coding. My studies focus on developing my skills in these areas. I'm dedicated to creating innovative and functional solutions."}),T.jsxs(GC,{children:[T.jsx(QC,{to:"/contact",whileHover:{scale:1.05},whileTap:{scale:.95},children:"Contact Me"}),T.jsx(YC,{href:"/JohnCarlo-CV.pdf",download:"JohnCarlo-CV.pdf",onClick:o,className:e?"disabled":"",as:ue.a,whileHover:{scale:1.05},whileTap:{scale:.95},children:"Download CV"})]}),T.jsxs(XC,{children:[T.jsx(Sa,{href:"https://www.facebook.com/share/1BWNP5P2jS/",target:"_blank",children:T.jsx("i",{className:"fab fa-facebook"})}),T.jsx(Sa,{href:"https://www.instagram.com/sry.jc?igsh=eTBlNDY0dG5kZnQ4",target:"_blank",children:T.jsx("i",{className:"fab fa-instagram"})}),T.jsx(Sa,{href:"https://github.com/JCVA25",target:"_blank",children:T.jsx("i",{className:"fab fa-github"})})]})]}),T.jsx(ZC,{children:T.jsxs(JC,{initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},transition:{duration:.8},children:[T.jsx(qC,{src:UC,alt:"Profile"}),T.jsxs(eP,{initial:"initial",animate:"animate",variants:Od,whileHover:{scale:1.1,rotate:[0,-2,2,0],transition:{duration:.3,rotate:{repeat:1/0,duration:.5}}},children:[T.jsx("span",{children:"🚀"})," 1 Year Experience"]}),T.jsxs(tP,{initial:"initial",animate:"animate",variants:Od,whileHover:{scale:1.1,rotate:[0,2,-2,0],transition:{duration:.3,rotate:{repeat:1/0,duration:.5}}},children:[T.jsx("span",{children:"💻"})," 2 Projects Complete"]})]})})]})},oP=new URL("/assets/carsada.png",self.location).href,sP=new URL("/assets/hamunto.png",self.location).href,aP=V.div`
   min-height: 100vh;
   padding: 6rem 2rem 2rem;
   background: #f5f5f5;
-`,oP=V.div`
+`,lP=V.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-`,sP=V(ue.div)`
+`,uP=V(ue.div)`
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`,aP=V.div`
+`,cP=V.div`
   height: 200px;
   background: #ddd;
   background-size: cover;
   background-position: center;
-`,lP=V.div`
+`,fP=V.div`
   padding: 1.5rem;
 `,Nd=V.h3`
   font-size: 1.5rem;
@@ -347,7 +347,7 @@ Error generating stack: `+o.message+`
   color: #636e72;
   margin-bottom: 1rem;
   line-height: 1.6;
-`,uP=V(ue.button)`
+`,dP=V(ue.button)`
   padding: 0.8rem 1.5rem;
   background: #ff6b6b;
   color: white;
@@ -359,7 +359,7 @@ Error generating stack: `+o.message+`
   &:hover {
     background: #ff5252;
   }
-`,cP=V(ue.div)`
+`,hP=V(ue.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -371,7 +371,7 @@ Error generating stack: `+o.message+`
   align-items: center;
   z-index: 1000;
   padding: 2rem;
-`,fP=V(ue.div)`
+`,pP=V(ue.div)`
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -379,11 +379,11 @@ Error generating stack: `+o.message+`
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
-`,dP=V.ul`
+`,mP=V.ul`
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
-`,hP=V.li`
+`,gP=V.li`
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -396,7 +396,7 @@ Error generating stack: `+o.message+`
     font-size: 1.5rem;
     margin-right: 0.5rem;
   }
-`,pP=V(ue.button)`
+`,yP=V(ue.button)`
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -405,14 +405,14 @@ Error generating stack: `+o.message+`
   color: #2d3436;
   font-size: 1.5rem;
   cursor: pointer;
-`,mP=()=>{const[e,t]=S.useState(null),n=[{title:"Carsada",description:" The future of jeepney travel is here. Our app modernizes routes, provides fixed fares, and makes your jeepney journey easier than ever.",image:"public/assets/carsada.png",features:["Easy to find routes for jeepneys and buses","Fixed fare calculation system","Real-time notification alerts","Navigation system for jeepneys and buses","User-friendly interface","Real-time updates on public transportation"]},{title:"Hamunto",description:"Manage your school club effortlessly with Hamunto. Our intuitive platform handles events, announcements, and membership, freeing you to focus on your club activities.",image:"public/assets/hamunto.png",features:["Explore campus activities and events","Real-time announcements system","Push notifications for important updates","Integrated messaging system","Events calendar and management","Club membership and management","Join and participate in campus clubs"]}];return T.jsxs(iP,{children:[T.jsx(oP,{children:n.map((r,i)=>T.jsxs(sP,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:i*.2},children:[T.jsx(aP,{style:{backgroundImage:`url(${r.image})`}}),T.jsxs(lP,{children:[T.jsx(Nd,{children:r.title}),T.jsx(Fd,{children:r.description}),T.jsx(uP,{whileHover:{scale:1.05},whileTap:{scale:.95},onClick:()=>t(r),children:"View Project"})]})]},r.title))}),T.jsx(Ok,{children:e&&T.jsx(cP,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>t(null),children:T.jsxs(fP,{initial:{scale:.8,opacity:0},animate:{scale:1,opacity:1},exit:{scale:.8,opacity:0},onClick:r=>r.stopPropagation(),children:[T.jsx(pP,{onClick:()=>t(null),whileHover:{scale:1.1},whileTap:{scale:.9},children:"×"}),T.jsx(Nd,{children:e.title}),T.jsx(Fd,{children:e.description}),T.jsx("h4",{style:{color:"#2d3436",marginTop:"1.5rem"},children:"Key Features:"}),T.jsx(dP,{children:e.features.map((r,i)=>T.jsx(hP,{as:ue.li,initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{delay:i*.1},children:r},i))})]})})})]})},gP=V.div`
+`,vP=()=>{const[e,t]=S.useState(null),n=[{title:"Carsada",description:" The future of jeepney travel is here. Our app modernizes routes, provides fixed fares, and makes your jeepney journey easier than ever.",image:oP,features:["Easy to find routes for jeepneys and buses","Fixed fare calculation system","Real-time notification alerts","Navigation system for jeepneys and buses","User-friendly interface","Real-time updates on public transportation"]},{title:"Hamunto",description:"Manage your school club effortlessly with Hamunto. Our intuitive platform handles events, announcements, and membership, freeing you to focus on your club activities.",image:sP,features:["Explore campus activities and events","Real-time announcements system","Push notifications for important updates","Integrated messaging system","Events calendar and management","Club membership and management","Join and participate in campus clubs"]}];return T.jsxs(aP,{children:[T.jsx(lP,{children:n.map((r,i)=>T.jsxs(uP,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:i*.2},children:[T.jsx(cP,{style:{backgroundImage:`url(${r.image})`}}),T.jsxs(fP,{children:[T.jsx(Nd,{children:r.title}),T.jsx(Fd,{children:r.description}),T.jsx(dP,{whileHover:{scale:1.05},whileTap:{scale:.95},onClick:()=>t(r),children:"View Project"})]})]},r.title))}),T.jsx(Ok,{children:e&&T.jsx(hP,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>t(null),children:T.jsxs(pP,{initial:{scale:.8,opacity:0},animate:{scale:1,opacity:1},exit:{scale:.8,opacity:0},onClick:r=>r.stopPropagation(),children:[T.jsx(yP,{onClick:()=>t(null),whileHover:{scale:1.1},whileTap:{scale:.9},children:"×"}),T.jsx(Nd,{children:e.title}),T.jsx(Fd,{children:e.description}),T.jsx("h4",{style:{color:"#2d3436",marginTop:"1.5rem"},children:"Key Features:"}),T.jsx(mP,{children:e.features.map((r,i)=>T.jsx(gP,{as:ue.li,initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{delay:i*.1},children:r},i))})]})})})]})},xP=V.div`
   min-height: 100vh;
   padding: 6rem 2rem 2rem;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-`,yP=V.div`
+`,wP=V.div`
   max-width: 1200px;
   width: 100%;
   display: grid;
@@ -421,20 +421,20 @@ Error generating stack: `+o.message+`
   background: #ffffff;
   border-radius: 20px;
   padding: 3rem;
-`,vP=V.div`
+`,SP=V.div`
   padding-right: 2rem;
-`,xP=V.h2`
+`,kP=V.h2`
   font-size: 2.5rem;
   color: #2d3436;
   margin-bottom: 1.5rem;
   font-weight: 700;
   letter-spacing: -1px;
-`,wP=V.p`
+`,CP=V.p`
   color: #636e72;
   line-height: 1.6;
   margin-bottom: 2rem;
   font-size: 1.1rem;
-`,SP=V.div`
+`,PP=V.div`
   margin-top: 3rem;
 `,ka=V.div`
   display: flex;
@@ -458,7 +458,7 @@ Error generating stack: `+o.message+`
     color: #636e72;
     font-size: 1rem;
   }
-`,kP=V(ue.form)`
+`,TP=V(ue.form)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -493,7 +493,7 @@ Error generating stack: `+o.message+`
     outline: none;
     box-shadow: 0 0 0 2px #ff6b6b;
   }
-`,CP=V.textarea`
+`,EP=V.textarea`
   padding: 1rem;
   background: #111111;
   border: none;
@@ -512,7 +512,7 @@ Error generating stack: `+o.message+`
     outline: none;
     box-shadow: 0 0 0 2px #ff6b6b;
   }
-`,PP=V(ue.button)`
+`,RP=V(ue.button)`
   padding: 1rem 2.5rem;
   background: #ff6b6b;
   color: white;
@@ -526,9 +526,9 @@ Error generating stack: `+o.message+`
   &:hover {
     background: #ff5252;
   }
-`,TP=()=>{const e=sm(),[t,n]=S.useState(!1),r=async i=>{i.preventDefault(),n(!0);try{const o=new FormData(i.target);if((await fetch("https://formsubmit.co/ajax/villaagustinjohncarlo@gmail.com",{method:"POST",body:o})).ok)alert("Message sent successfully!"),e("/");else throw new Error("Failed to send message")}catch{alert("Failed to send message. Please try again later.")}finally{n(!1)}};return T.jsx(gP,{children:T.jsxs(yP,{children:[T.jsxs(vP,{children:[T.jsx(xP,{children:"Get in Touch"}),T.jsx(wP,{children:"Have a project in mind? Looking to partner or work together? Reach out through the form and I'll get back to you in the next 24 hours."}),T.jsxs(SP,{children:[T.jsxs(ka,{children:[T.jsx("i",{className:"fas fa-map-marker-alt"}),T.jsx("p",{children:"Pavia, Iloilo City"})]}),T.jsxs(ka,{children:[T.jsx("i",{className:"fas fa-envelope"}),T.jsx("p",{children:"villaagustinjohncarlo@gmail.com"})]}),T.jsxs(ka,{children:[T.jsx("i",{className:"fas fa-phone"}),T.jsx("p",{children:"09284482727"})]})]})]}),T.jsxs(kP,{onSubmit:r,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5},children:[T.jsx("input",{type:"hidden",name:"_subject",value:"New Portfolio Contact Message!"}),T.jsx("input",{type:"hidden",name:"_template",value:"table"}),T.jsx("input",{type:"hidden",name:"_captcha",value:"true"}),T.jsxs(no,{children:[T.jsx(Ca,{children:"Name"}),T.jsx(Id,{type:"text",name:"name",placeholder:"Your name",required:!0})]}),T.jsxs(no,{children:[T.jsx(Ca,{children:"Email"}),T.jsx(Id,{type:"email",name:"email",placeholder:"Your email",required:!0})]}),T.jsxs(no,{className:"full-width",children:[T.jsx(Ca,{children:"Message"}),T.jsx(CP,{name:"message",placeholder:"Your message",required:!0})]}),T.jsx(no,{className:"full-width",children:T.jsx(PP,{type:"submit",whileHover:{scale:1.05},whileTap:{scale:.95},disabled:t,children:t?"Sending...":"Send Message"})})]})]})})},EP=V.div`
+`,LP=()=>{const e=sm(),[t,n]=S.useState(!1),r=async i=>{i.preventDefault(),n(!0);try{const o=new FormData(i.target);if((await fetch("https://formsubmit.co/ajax/villaagustinjohncarlo@gmail.com",{method:"POST",body:o})).ok)alert("Message sent successfully!"),e("/");else throw new Error("Failed to send message")}catch{alert("Failed to send message. Please try again later.")}finally{n(!1)}};return T.jsx(xP,{children:T.jsxs(wP,{children:[T.jsxs(SP,{children:[T.jsx(kP,{children:"Get in Touch"}),T.jsx(CP,{children:"Have a project in mind? Looking to partner or work together? Reach out through the form and I'll get back to you in the next 24 hours."}),T.jsxs(PP,{children:[T.jsxs(ka,{children:[T.jsx("i",{className:"fas fa-map-marker-alt"}),T.jsx("p",{children:"Pavia, Iloilo City"})]}),T.jsxs(ka,{children:[T.jsx("i",{className:"fas fa-envelope"}),T.jsx("p",{children:"villaagustinjohncarlo@gmail.com"})]}),T.jsxs(ka,{children:[T.jsx("i",{className:"fas fa-phone"}),T.jsx("p",{children:"09284482727"})]})]})]}),T.jsxs(TP,{onSubmit:r,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5},children:[T.jsx("input",{type:"hidden",name:"_subject",value:"New Portfolio Contact Message!"}),T.jsx("input",{type:"hidden",name:"_template",value:"table"}),T.jsx("input",{type:"hidden",name:"_captcha",value:"true"}),T.jsxs(no,{children:[T.jsx(Ca,{children:"Name"}),T.jsx(Id,{type:"text",name:"name",placeholder:"Your name",required:!0})]}),T.jsxs(no,{children:[T.jsx(Ca,{children:"Email"}),T.jsx(Id,{type:"email",name:"email",placeholder:"Your email",required:!0})]}),T.jsxs(no,{className:"full-width",children:[T.jsx(Ca,{children:"Message"}),T.jsx(EP,{name:"message",placeholder:"Your message",required:!0})]}),T.jsx(no,{className:"full-width",children:T.jsx(RP,{type:"submit",whileHover:{scale:1.05},whileTap:{scale:.95},disabled:t,children:t?"Sending...":"Send Message"})})]})]})})},MP=V.div`
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-`;function RP(){return T.jsx(m1,{children:T.jsxs(EP,{children:[T.jsx(BC,{}),T.jsxs(l1,{children:[T.jsx(go,{path:"/",element:T.jsx(rP,{})}),T.jsx(go,{path:"/projects",element:T.jsx(mP,{})}),T.jsx(go,{path:"/contact",element:T.jsx(TP,{})})]})]})})}Zp(document.getElementById("root")).render(T.jsx(S.StrictMode,{children:T.jsx(RP,{})}));
-//# sourceMappingURL=index-a162e3ac.js.map
+`;function AP(){return T.jsx(m1,{children:T.jsxs(MP,{children:[T.jsx(BC,{}),T.jsxs(l1,{children:[T.jsx(go,{path:"/",element:T.jsx(iP,{})}),T.jsx(go,{path:"/projects",element:T.jsx(vP,{})}),T.jsx(go,{path:"/contact",element:T.jsx(LP,{})})]})]})})}Zp(document.getElementById("root")).render(T.jsx(S.StrictMode,{children:T.jsx(AP,{})}));
+//# sourceMappingURL=index-32c654f8.js.map
