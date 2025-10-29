@@ -2,9 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styled from '@emotion/styled';
 import { useState } from 'react';
 
-// Import images
+
 const carsadaImage = new URL('/assets/carsada.png', import.meta.url).href;
 const hamuntoImage = new URL('/assets/hamunto.png', import.meta.url).href;
+const quickmartImage = new URL('/assets/GGapp.jpeg', import.meta.url).href; 
 
 const ProjectsContainer = styled.div`
   min-height: 100vh;
@@ -18,14 +19,15 @@ const ProjectsContainer = styled.div`
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr; // Mobile: 1 column
+  gap: 2rem; 
   max-width: 1200px;
   margin: 0 auto;
-  
+
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -153,7 +155,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Carsada',
-      description: ' The future of jeepney travel is here. Our app modernizes routes, provides fixed fares, and makes your jeepney journey easier than ever.',
+      description: 'The future of jeepney travel is here. Our app modernizes routes, provides fixed fares, and makes your jeepney journey easier than ever.',
       image: carsadaImage,
       features: [
         'Easy to find routes for jeepneys and buses',
@@ -177,6 +179,16 @@ const Projects = () => {
         'Club membership and management',
         'Join and participate in campus clubs'
       ]
+    },
+    {
+      title: 'GoodGame App',
+      description: 'GoodGame is the specialized platform to easily organize and manage all sports and esports tournaments in Iloilo City.',
+      image: quickmartImage,
+      features: [
+        'Easy organize a events',
+        'Can join all players',
+        
+      ]
     }
   ];
 
@@ -199,7 +211,7 @@ const Projects = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setSelectedProject(project)}
               >
-                View Project
+                View Feature
               </ViewProjectButton>
             </ProjectContent>
           </ProjectCard>
@@ -251,4 +263,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

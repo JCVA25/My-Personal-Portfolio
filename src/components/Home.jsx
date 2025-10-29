@@ -521,7 +521,7 @@ const Home = () => {
               }
             }}
           >
-            <span>🚀</span> 1 Year Experience
+            <span>🚀</span> 2 Year Experience
           </ExperienceBadge>
           <TechBadge
             initial="initial"
@@ -536,7 +536,7 @@ const Home = () => {
               }
             }}
           >
-            <span>💻</span> 2 Projects Complete
+            <span>💻</span> 3 Projects Complete
           </TechBadge>
         </ProfileImageContainer>
       </ImageSection>
